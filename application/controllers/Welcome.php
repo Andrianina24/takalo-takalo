@@ -38,6 +38,23 @@ class Welcome extends CI_Controller {
 		}
 	}
 
+	public function inscription()
+	{
+		$nom = $this->input->post("nom");
+		$mail = $this->input->post("mail");
+		$mdp = $this->input->post("mdp");
+		$this->load->model('model');
+		$this->model->inscription($nom,$mail, $mdp);
+		$_SESSION['mail'] = $mail;
+		$this->session->set_userdata($mail,'mail');
+		redirect('welcome/index1');
+	}
+
+	public function inscri()
+	{
+		$this->load->view('inscri');
+	}	
+
 	public function index1()
 	{
 		$this->load->view('template');

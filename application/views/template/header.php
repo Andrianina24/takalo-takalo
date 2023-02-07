@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+echo $_SESSION['mail'];
+?><!DOCTYPE html>
 <html>
 
 <head>

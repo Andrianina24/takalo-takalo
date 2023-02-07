@@ -1,6 +1,6 @@
 
   <div class="half">
-    <div class="bg order-1 order-md-2" style="background-image: url('images/bg_1.jpg');"></div>
+    <div class="bg order-1 order-md-2" ></div>
     <div class="contents order-2 order-md-1">
 
       <div class="container">
@@ -11,7 +11,7 @@
               <h3>Login to <strong>A-Takalo</strong></h3>
               <!-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
               </div>
-              <form action="<?php echo base_url('welcome/login');?>" method="post">
+              <form action="<?php echo base_url('welcome/inscription');?>" method="post">
                 <div class="form-group first">
                   <label for="username">Username</label>
                   <input type="text" class="form-control" placeholder="Your username" id="nom" name="nom">
