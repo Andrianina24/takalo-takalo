@@ -20,8 +20,26 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		// $this->load->view('welcome_message');
-		$this->load->view('index');
-		
+		$this->load->view('login');
+	}
+	public function login()
+	{
+		$mail = $this->input->post("mail");
+		$mdp = $this->input->post("mdp");
+
+		$this->load->model('model');
+		if($this->model->checkLogin($mail,$mdp))
+		{
+			$_SESSION['mail'] = $mail;
+			$this->session->set_userdata($mail,'mail');
+			redirect('welcome/index1');
+		}else{
+			redirect('welcome/index');
+		}
+	}
+
+	public function index1()
+	{
+		$this->load->view('template');
 	}		
 }
