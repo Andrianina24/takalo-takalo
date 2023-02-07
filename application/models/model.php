@@ -21,7 +21,6 @@ class Model extends CI_Model
         $sql = "insert into Utilisateur(nom,email,mdp) values(%s,%s,%s)";
         $sql = sprintf($sql, $this->db->escape($nom), $this->db->escape($mail), $this->db->escape($mdp));
         $query = $this->db->query($sql);
-        
     }
 }
 ?>
