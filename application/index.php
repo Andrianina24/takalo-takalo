@@ -18,7 +18,6 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
-  <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/bootstrap.css" /> -->
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/bootstrap.css" />
 
   <!-- fonts style -->
@@ -37,7 +36,7 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
-            <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="">
+            <img src="images/logo.png" alt="">
             <span>
               Lodge
             </span>
@@ -69,7 +68,7 @@
             </div>
             <div class="quote_btn-container ">
               <a href="">
-                <img src="<?php echo base_url(); ?>assets/images/cart.png" alt="">
+                <img src="images/cart.png" alt="">
                 <div class="cart_number">
                   0
                 </div>
@@ -86,7 +85,7 @@
     <!-- slider section -->
     <section class=" slider_section position-relative">
       <div class="design-box">
-        <img src="<?php echo base_url(); ?>assets/images/design-1.png" alt="">
+        <img src="images/design-1.png" alt="">
       </div>
       <div class="slider_number-container d-none d-md-block">
         <div class="number-box">
@@ -141,7 +140,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="img-box">
-                    <img src="<?php echo base_url(); ?>assets/images/slider-img.png" alt="">
+                    <img src="images/slider-img.png" alt="">
                   </div>
                 </div>
               </div>
@@ -168,7 +167,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="img-box">
-                    <img src="<?php echo base_url(); ?>assets/images/slider-img.png" alt="">
+                    <img src="images/slider-img.png" alt="">
                   </div>
                 </div>
               </div>
@@ -195,7 +194,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="img-box">
-                    <img src="<?php echo base_url(); ?>assets/images/slider-img.png" alt="">
+                    <img src="images/slider-img.png" alt="">
                   </div>
                 </div>
               </div>
@@ -220,7 +219,7 @@
             </h6>
           </div>
           <div class="img-box">
-            <img src="<?php echo base_url(); ?>assets/images/i-1.png" alt="">
+            <img src="images/i-1.png" alt="">
           </div>
           <div class="name">
             <h5>
@@ -235,7 +234,7 @@
             </h6>
           </div>
           <div class="img-box">
-            <img src="<?php echo base_url(); ?>assets/images/i-2.png" alt="">
+            <img src="images/i-2.png" alt="">
           </div>
           <div class="name">
             <h5>
@@ -250,7 +249,7 @@
             </h6>
           </div>
           <div class="img-box">
-            <img src="<?php echo base_url(); ?>assets/images/i-3.png" alt="">
+            <img src="images/i-3.png" alt="">
           </div>
           <div class="name">
             <h5>
@@ -268,7 +267,7 @@
 
   <section class="about_section layout_padding2-top layout_padding-bottom">
     <div class="design-box">
-      <img src="<?php echo base_url(); ?>assets/images/design-2.png" alt="">
+      <img src="images/design-2.png" alt="">
     </div>
     <div class="container">
       <div class="row">
@@ -294,7 +293,7 @@
         </div>
         <div class="col-md-6">
           <div class="img-box">
-            <img src="<?php echo base_url(); ?>assets/images/about-img.png" alt="">
+            <img src="images/about-img.png" alt="">
           </div>
         </div>
       </div>
@@ -320,7 +319,7 @@
             </h6>
           </div>
           <div class="img-box">
-            <img src="<?php echo base_url(); ?>assets/images/p-1.png" alt="">
+            <img src="images/p-1.png" alt="">
           </div>
           <div class="detail-box">
             <h5>
@@ -338,7 +337,7 @@
             </h6>
           </div>
           <div class="img-box">
-            <img src="<?php echo base_url(); ?>assets/images/i-2.png" alt="">
+            <img src="images/i-2.png" alt="">
           </div>
           <div class="detail-box">
             <h5>
@@ -356,7 +355,7 @@
             </h6>
           </div>
           <div class="img-box">
-            <img src="<?php echo base_url(); ?>assets/images/i-3.png" alt="">
+            <img src="images/i-3.png" alt="">
           </div>
           <div class="detail-box">
             <h5>
@@ -382,7 +381,7 @@
 
   <section class="ring_section layout_padding">
     <div class="design-box">
-      <img src="<?php echo base_url(); ?>assets/images/design-1.png" alt="">
+      <img src="images/design-1.png" alt="">
     </div>
     <div class="container">
       <div class="ring_container layout_padding2">
@@ -402,7 +401,7 @@
           </div>
           <div class="col-md-7">
             <div class="img-box">
-              <img src="<?php echo base_url(); ?>assets/images/ring-img.jpg" alt="">
+              <img src="images/ring-img.jpg" alt="">
             </div>
           </div>
         </div>
@@ -430,7 +429,7 @@
             <div class="client_container">
               <div class="client-id">
                 <div class="img-box">
-                  <img src="<?php echo base_url(); ?>assets/images/client.png" alt="">
+                  <img src="images/client.png" alt="">
                 </div>
                 <div class="name">
                   <h5>
@@ -453,7 +452,7 @@
             <div class="client_container">
               <div class="client-id">
                 <div class="img-box">
-                  <img src="<?php echo base_url(); ?>assets/images/client.png" alt="">
+                  <img src="images/client.png" alt="">
                 </div>
                 <div class="name">
                   <h5>
@@ -476,7 +475,7 @@
             <div class="client_container">
               <div class="client-id">
                 <div class="img-box">
-                  <img src="<?php echo base_url(); ?>assets/images/client.png" alt="">
+                  <img src="images/client.png" alt="">
                 </div>
                 <div class="name">
                   <h5>
@@ -515,7 +514,7 @@
 
   <section class="contact_section layout_padding">
     <div class="design-box">
-      <img src="<?php echo base_url(); ?>assets/images/design-2.png" alt="">
+      <img src="images/design-2.png" alt="">
     </div>
     <div class="container ">
       <div class="">
@@ -569,7 +568,7 @@
           <div class="col-md-3">
             <div class="info_logo">
               <a href="">
-                <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="">
+                <img src="images/logo.png" alt="">
                 <span>
                   Lodge
                 </span>
@@ -579,7 +578,7 @@
           <div class="col-md-3">
             <div class="info_contact">
               <a href="">
-                <img src="<?php echo base_url(); ?>assets/images/location.png" alt="">
+                <img src="images/location.png" alt="">
                 <span>
                   Address
                 </span>
@@ -589,7 +588,7 @@
           <div class="col-md-3">
             <div class="info_contact">
               <a href="">
-                <img src="<?php echo base_url(); ?>assets/images/phone.png" alt="">
+                <img src="images/phone.png" alt="">
                 <span>
                   +01 1234567890
                 </span>
@@ -599,7 +598,7 @@
           <div class="col-md-3">
             <div class="info_contact">
               <a href="">
-                <img src="<?php echo base_url(); ?>assets/images/mail.png" alt="">
+                <img src="images/mail.png" alt="">
                 <span>
                   demo@gmail.com
                 </span>
@@ -633,16 +632,16 @@
           </div>
           <div class="social_box">
             <a href="">
-              <img src="<?php echo base_url(); ?>assets/images/fb.png" alt="">
+              <img src="images/fb.png" alt="">
             </a>
             <a href="">
-              <img src="<?php echo base_url(); ?>assets/images/twitter.png" alt="">
+              <img src="images/twitter.png" alt="">
             </a>
             <a href="">
-              <img src="<?php echo base_url(); ?>assets/images/linkedin.png" alt="">
+              <img src="images/linkedin.png" alt="">
             </a>
             <a href="">
-              <img src="<?php echo base_url(); ?>assets/images/insta.png" alt="">
+              <img src="images/insta.png" alt="">
             </a>
           </div>
         </div>
