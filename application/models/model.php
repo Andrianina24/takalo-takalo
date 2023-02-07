@@ -15,12 +15,23 @@ class Model extends CI_Model
         }
         return $valiny;
     }
-    
-    public function inscription($nom,$mail,$mdp)
+
+    public function inscription($nom, $mail, $mdp)
     {
         $sql = "insert into Utilisateur(nom,email,mdp) values(%s,%s,%s)";
         $sql = sprintf($sql, $this->db->escape($nom), $this->db->escape($mail), $this->db->escape($mdp));
         $query = $this->db->query($sql);
+    }
+
+    public function details()
+    {
+        $sql = "select Objet.id_objet,Objet.nom_objet,Objet.prix,Objet.id_proprietaire,Objet.descri,Objet.stat,
+        Details.img from Objet join Details on Objet.id_objet = Details.id_objet";
+        $query = $this->db->query($sql);
+        $liste = array();
+        foreach ($query->result_array() as $row) {
+            $liste[] = $row;
+        }
     }
 }
 ?>
