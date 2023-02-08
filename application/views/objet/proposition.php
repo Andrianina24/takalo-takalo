@@ -5,7 +5,8 @@
         <?php foreach ($liste as $objet) { ?>
           <?php if (!empty($objet)) { ?>
             <?php $this->load->model('Model');
-            if ($this->Model->personne($_SESSION['mail'])['nom'] == $objet['client']) { ?>
+                  $cnom=$this->Model->personne($_SESSION['mail']);
+            if ($cnom['nom'] == $objet['client']) { ?>
               <div class="box">
                 <div>
                   <div class="price">
