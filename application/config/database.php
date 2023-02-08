@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
-	'database' => 'takalo',
+	'hostname' => 'mysql-andrianina24.alwaysdata.net',
+	'username' => '299361_andrianin',
+	'password' => 'Andrianina2002!',
+	'database' => 'andrianina24_takalo',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

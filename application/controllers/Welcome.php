@@ -27,8 +27,8 @@ class Welcome extends CI_Controller {
 		$mail = $this->input->post("mail");
 		$mdp = $this->input->post("mdp");
 
-		$this->load->model('model');
-		if($this->model->checkLogin($mail,$mdp))
+		$this->load->model('Model');
+		if($this->Model->checkLogin($mail,$mdp))
 		{
 			$_SESSION['mail'] = $mail;
 			$this->session->set_userdata($mail,'mail');
@@ -43,8 +43,8 @@ class Welcome extends CI_Controller {
 		$nom = $this->input->post("nom");
 		$mail = $this->input->post("mail");
 		$mdp = $this->input->post("mdp");
-		$this->load->model('model');
-		$this->model->inscription($nom,$mail, $mdp);
+		$this->load->model('Model');
+		$this->Model->inscription($nom,$mail, $mdp);
 		$_SESSION['mail'] = $mail;
 		$this->session->set_userdata($mail,'mail');
 		redirect('welcome/index1');
