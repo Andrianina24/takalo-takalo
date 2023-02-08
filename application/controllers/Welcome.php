@@ -87,6 +87,27 @@ class Welcome extends CI_Controller {
 		$data['liste'] = $this->Model->proposition($_SESSION['mail']);
 		$this->load->view('objet',$data);
 	}
+	public function accept()
+	{
+		$idp = $_GET['idp'];
+		$p1 = $_GET['p1'];
+		$p2 = $_GET['p2'];
+		$objet1 = $_GET['objet1'];
+		$objet2 = $_GET['objet2'];
+		$this->load->model('Model');
+		$this->Model->accept($idp,$objet1,$objet2,$p2,$p1);
+		$data['content'] = 'base';
+		$this->load->view('template',$data);
+	}
+	
+	public function decline()
+	{
+		$idp = $_GET['idp'];
+		$this->load->model('Model');
+		$this->Model->decline($idp);
+		$data['content'] = 'perso';
+		$this->load->view('objet',$data);
+	}
 	public function deconnexion()
 	{
 		$this->session->sess_destroy();

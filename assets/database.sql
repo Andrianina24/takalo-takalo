@@ -28,6 +28,7 @@ create table Objet(
 );
 
 create table Proposition(
+    id_proposition int primary key auto_increment,
     id_client int,
     id_cible int,
     id_objet int,
@@ -60,4 +61,5 @@ insert into Categorie values(null,'Accessoires');
 insert into Categorie values(null,'Chaussures');
 insert into Categorie values(null,'Autres');
 
-insert into Proposition values(1,4,1,3,0);
+insert into Proposition values(null,1,4,1,3,0);
+insert into Proposition values(null,4,1,1,3,0);
