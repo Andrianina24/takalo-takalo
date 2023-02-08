@@ -25,7 +25,7 @@ class Model extends CI_Model
 
     public function details()
     {
-        $sql = "select o.nom_objet as nom_objet,o.prix as prix,o.descri as descri,o.img as img,u.nom as nom from Objet o join Utilisateur u on o.id_proprietaire=u.id_utilisateur";
+        $sql = "select o.id_objet as id_objet,o.nom_objet as nom_objet,o.prix as prix,o.descri as descri,o.img as img,u.nom as nom,u.id_utilisateur as nomu from Objet o join Utilisateur u on o.id_proprietaire=u.id_utilisateur";
         $query = $this->db->query($sql);
         $data[] = array();
         foreach ($query->result_array() as $row) {
@@ -63,6 +63,14 @@ class Model extends CI_Model
         $row=$query->row_array();
         return $row;
     }
+    public function getobjet($mail)
+    {
+        $sql = "select o.nom_objet as nom_objet,o.id_objet as id_objet,o.id_proprietaire from Objet o join Utilisateur u on o.id_proprietaire=u.id_utilisateur where u.email=%s";
+        $sql = sprintf($sql, $this->db->escape($mail));
+        $query = $this->db->query($sql);
+        $row=$query->row_array();
+        return $row;
+    }
     
     public function accept($idp,$objet1,$objet2,$p1,$p2)
     {
@@ -80,6 +88,12 @@ class Model extends CI_Model
     {
         $sql = "update Proposition set stat=2 where id_proposition=%s";
         $sql = sprintf($sql, $this->db->escape($idp));
+        $query = $this->db->query($sql);
+    }
+    public function echange($p1,$p2,$o1,$o2)
+    {
+        $sql = "insert into Proposition values(null,%s,%s,%s,%s,0)";
+        $sql = sprintf($sql, $this->db->escape($p1),$this->db->escape($p2),$this->db->escape($o1),$this->db->escape($o2));
         $query = $this->db->query($sql);
     }
 }

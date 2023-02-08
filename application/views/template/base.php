@@ -31,6 +31,8 @@
         <?php if (isset($liste)) { ?>
           <?php foreach ($liste as $objet) { ?>
             <?php if (!empty($objet)) { ?>
+              <?php $this->load->model('Model');
+              $cnom = $this->Model->personne($_SESSION['mail']); ?>
               <div class="box">
                 <div class="price">
                   <h6>
@@ -50,6 +52,12 @@
                   </h5>
                   <h5>
                     <?php echo $objet['prix'] ?> Ar
+                    <?php if ($cnom['nom'] != $objet['nom']) { ?>
+                      <div>
+                        <a href="<?php echo base_url('welcome/echange'); ?>?personne=<?php echo $objet['nomu'] ?>&objet=<?php echo $objet['id_objet'] ?>"
+                          style="color: green; ">Echanger</a>
+                      </div>
+                    <?php } ?>
                   </h5>
                 </div>
               </div>

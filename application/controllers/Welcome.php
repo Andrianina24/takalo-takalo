@@ -55,10 +55,6 @@ class Welcome extends CI_Controller
 		$this->load->view('inscri');
 	}
 
-	public function index1()
-	{
-		$this->load->view('template');
-	}
 	public function index2()
 	{
 		$this->load->view('objet');
@@ -99,8 +95,7 @@ class Welcome extends CI_Controller
 		$objet2 = $_GET['objet2'];
 		$this->load->model('Model');
 		$this->Model->accept($idp, $objet1, $objet2, $p2, $p1);
-		$data['content'] = 'base';
-		$this->load->view('template', $data);
+		redirect('welcome/objet');
 	}
 
 	public function decline()
@@ -108,8 +103,17 @@ class Welcome extends CI_Controller
 		$idp = $_GET['idp'];
 		$this->load->model('Model');
 		$this->Model->decline($idp);
-		$data['content'] = 'perso';
-		$this->load->view('objet', $data);
+		redirect('welcome/objet');
+	}
+	public function echange()
+	{
+		$p_cible = $_GET['personne'];
+		$o_cible = $_GET['objet'];
+		$this->load->model('Model');
+        $client=$this->Model->personne($_SESSION['mail']);
+        $objet=$this->Model->getobjet($_SESSION['mail']);
+		$this->Model->echange($client['id_utilisateur'], $p_cible, $objet['id_objet'], $o_cible);
+		redirect('welcome/objet');
 	}
 	public function deconnexion()
 	{

@@ -50,7 +50,7 @@
                     <div><a
                         href="<?php echo base_url('welcome/accept'); ?>?idp=<?php echo $objet['id_proposition'] ?>&p1=<?php echo $objet['c2'] ?>&p2=<?php echo $objet['c1'] ?>&objet1=<?php echo $objet['id1'] ?>&objet2=<?php echo $objet['id2'] ?>">Accept</a>
                     </div>
-                    <div><a href="<?php echo base_url('welcome/decline'); ?>" style="color: red; ">Decline</a></div>
+                    <div><a href="<?php echo base_url('welcome/decline'); ?>?idp=<?php echo $objet['id_proposition'] ?>" style="color: red; ">Decline</a></div>
                   </div>
                 </div>
               <?php } ?>

@@ -51,7 +51,7 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="<?php echo base_url('welcome/index1') ?>">Home <span
+                  <a class="nav-link" href="<?php echo base_url('welcome/objet') ?>">Home <span
                       class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
