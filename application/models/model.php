@@ -25,7 +25,7 @@ class Model extends CI_Model
 
     public function details()
     {
-        $sql = "select * from Objet";
+        $sql = "select o.nom_objet as nom_objet,o.prix as prix,o.descri as descri,o.img as img,u.nom as nom from Objet o join Utilisateur u on o.id_proprietaire=u.id_utilisateur";
         $query = $this->db->query($sql);
         $data[] = array();
         foreach ($query->result_array() as $row) {
