@@ -14,22 +14,17 @@ create table Categorie(
     nom_categorie varchar(100)
 );
 
-create table Sous_categorie(
-    id_sous int primary key auto_increment,
-    id_categorie int,
-    nom_sous varchar(100),
-    foreign key(id_categorie) references Categorie(id_categorie)
-);
-
 create table Objet(
     id_objet int primary key auto_increment,
+    id_categorie int,
     nom_objet varchar(100),
     prix double,
     id_proprietaire int,
     descri varchar(100),
     stat int,
     img varchar(100),
-    foreign key(id_proprietaire) references Utilisateur(id_utilisateur)
+    foreign key(id_proprietaire) references Utilisateur(id_utilisateur),
+    foreign key(id_categorie) references Categorie(id_categorie)
 );
 
 create table Proposition(
@@ -50,3 +45,16 @@ insert into Utilisateur values(null,"Debbie","debbie7@gmail.com","dede");
 insert into Utilisateur values(null,"Lisa","lisa3@gmail.com","lili");
 insert into Utilisateur values(null,"admin","admin@gmail.com","admin");
 
+insert into Objet values(null,1,"T-Shirt Nike",15000,4,"T-Shirt Nike blanc",0,"nike.jpg");
+insert into Objet values(null,2,"Pantalon Adidas",22000,6,"Pantalon Adidas noir",0,"adidas.jpg");
+insert into Objet values(null,4,"Chaussures Reebok",50000,1,"Chaussures Reebok marron",0,"reebok.jpg");
+
+insert into Objet values(null,"T-Shirt Nike",15,1,"T-Shirt Nike blanc",0,"nike.jpg");
+insert into Objet values(null,"Pantalon Adidas",12,1,"Pantalon Adidas noir",0,"adidas.jpg");
+insert into Objet values(null,"Chaussures Reebok",30,1,"Chaussures Reebok marron",0,"reebok.jpg");
+
+insert into Categorie values(null,'Haut');
+insert into Categorie values(null,'Bas');
+insert into Categorie values(null,'Accessoires');
+insert into Categorie values(null,'Chaussures');
+insert into Categorie values(null,'Autres');

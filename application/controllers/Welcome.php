@@ -63,4 +63,26 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('objet');
 	}		
+	
+	public function objet_perso()
+	{
+		$this->load->model('Model');
+		$data[] = array();
+		$data['liste'] = $this->Model->perso($_SESSION['mail']);
+		$this->load->view('objet',$data);
+	}
+	public function objet()
+	{
+		$this->load->model('Model');
+		$data[] = array();
+		$data['liste'] = $this->Model->details();
+		$this->load->view('objet',$data);
+	}
+	public function deconnexion()
+	{
+		$this->session->sess_destroy();
+		redirect('welcome/index');
+	}
+
+
 }

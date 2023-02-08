@@ -39,7 +39,7 @@ echo $_SESSION['mail'];
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
-            <img src="<?php echo base_url(); ?>assets/logo.png" alt="">
+            <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="">
             <span>
               Takalo
             </span>
@@ -55,7 +55,7 @@ echo $_SESSION['mail'];
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About</a>
+                  <a class="nav-link" href="<?php echo base_url('welcome/objet_perso') ?>"> Me</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="jewellery.html">Jewellery </a>
@@ -64,7 +64,7 @@ echo $_SESSION['mail'];
                   <a class="nav-link" href="contact.html">Contact us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="<?php echo base_url('welcome/deconnexion') ?>">Log out</a>
                 </li>
               </ul>
 

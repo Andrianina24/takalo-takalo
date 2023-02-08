@@ -25,13 +25,24 @@ class Model extends CI_Model
 
     public function details()
     {
-        $sql = "select Objet.id_objet,Objet.nom_objet,Objet.prix,Objet.id_proprietaire,Objet.descri,Objet.stat,
-        Objet.img from Objet";
+        $sql = "select * from objet";
         $query = $this->db->query($sql);
         $data[] = array();
         foreach ($query->result_array() as $row) {
-            $data[] =array("id_objet"=>$row['id_objet'],"nom_bojet"=>$row['nom_objet'],"prix"=>$row['prix'],"id_proprietaire"=>$row['id_proprietaire'],"descri"=>$row['descri'],"stat"=>$row['stat'],"img"=>$row['img']);
+            $data[] = $row;
         }
+        return $data;
+    }
+    public function perso($mail)
+    {
+        $sql = "select * from objet join utilisateur on objet.id_proprietaire=utilisateur.id_utilisateur where utilisateur.email=%s";
+        $sql = sprintf($sql, $this->db->escape($mail));
+        $query = $this->db->query($sql);
+        $data[] = array();
+        foreach ($query->result_array() as $row) {
+            $data[] = $row;
+        }
+        return $data;
     }
 }
 ?>

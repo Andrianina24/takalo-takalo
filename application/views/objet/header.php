@@ -52,7 +52,7 @@
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About</a>
+                  <a class="nav-link" href="<?php echo base_url('welcome/objet_perso') ?>"> Me</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="jewellery.html">Jewellery </a>
@@ -61,7 +61,7 @@
                   <a class="nav-link" href="contact.html">Contact us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Login</a>
+                  <a class="nav-link" href="<?php echo base_url('welcome/deconnexion') ?>">Log out</a>
                 </li>
               </ul>
 
