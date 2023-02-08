@@ -7,7 +7,7 @@ class Model extends CI_Model
     public function checkLogin($mail, $mdp)
     {
         $valiny = false;
-        $query = $this->db->query('SELECT id_utilisateur,nom,email,mdp FROM Utilisateur');
+        $query = $this->db->query('SELECT id_Utilisateur,nom,email,mdp FROM Utilisateur');
         foreach ($query->result_array() as $row) {
             if ($mail == $row['email'] && $mdp == $row['mdp']) {
                 $valiny = true;
@@ -25,7 +25,7 @@ class Model extends CI_Model
 
     public function details()
     {
-        $sql = "select * from objet";
+        $sql = "select * from Objet";
         $query = $this->db->query($sql);
         $data[] = array();
         foreach ($query->result_array() as $row) {
@@ -35,7 +35,7 @@ class Model extends CI_Model
     }
     public function perso($mail)
     {
-        $sql = "select * from objet join utilisateur on objet.id_proprietaire=utilisateur.id_utilisateur where utilisateur.email=%s";
+        $sql = "select * from Objet join Utilisateur on Objet.id_proprietaire=Utilisateur.id_Utilisateur where Utilisateur.email=%s";
         $sql = sprintf($sql, $this->db->escape($mail));
         $query = $this->db->query($sql);
         $data[] = array();
