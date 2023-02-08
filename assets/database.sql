@@ -51,7 +51,7 @@ insert into Objet values(null,1,"T-Shirt Nike",15000,4,"T-Shirt Nike blanc",0,"n
 insert into Objet values(null,2,"Pantalon Adidas",22000,6,"Pantalon Adidas noir",0,"adidas.jpg");
 insert into Objet values(null,4,"Chaussures Reebok",50000,1,"Chaussures Reebok marron",0,"reebok.jpg");
 
-insert into Objet values(null,"T-Shirt Nike",15,1,"T-Shirt Nike blanc",0,"nike.jpg");
+insert into Objet values(null,"T-Shirt",13000,1,"T-Shirt Nike ",0,"noir.jpg");
 insert into Objet values(null,"Pantalon Adidas",12,1,"Pantalon Adidas noir",0,"adidas.jpg");
 insert into Objet values(null,"Chaussures Reebok",30,1,"Chaussures Reebok marron",0,"reebok.jpg");
 
