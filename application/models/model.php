@@ -26,11 +26,11 @@ class Model extends CI_Model
     public function details()
     {
         $sql = "select Objet.id_objet,Objet.nom_objet,Objet.prix,Objet.id_proprietaire,Objet.descri,Objet.stat,
-        Details.img from Objet join Details on Objet.id_objet = Details.id_objet";
+        Objet.img from Objet";
         $query = $this->db->query($sql);
-        $liste = array();
+        $data[] = array();
         foreach ($query->result_array() as $row) {
-            $liste[] = $row;
+            $data[] =array("id_objet"=>$row['id_objet'],"nom_bojet"=>$row['nom_objet'],"prix"=>$row['prix'],"id_proprietaire"=>$row['id_proprietaire'],"descri"=>$row['descri'],"stat"=>$row['stat'],"img"=>$row['img']);
         }
     }
 }

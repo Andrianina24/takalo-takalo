@@ -58,5 +58,9 @@ class Welcome extends CI_Controller {
 	public function index1()
 	{
 		$this->load->view('template');
+	}
+	public function index2()
+	{
+		$this->load->view('objet');
 	}		
 }

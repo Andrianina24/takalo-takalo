@@ -18,14 +18,14 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap.css" />
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Poppins:400,600,700&display=swap" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="<?php echo base_url() ?>assets/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="<?php echo base_url() ?>assets/css/responsive.css" rel="stylesheet" />
 </head>
 
 <body class="sub_page">
@@ -84,55 +84,47 @@
     <!-- end header section -->
   </div>
 
-  <!-- contact section -->
 
-  <section class="contact_section layout_padding">
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding2-top layout_padding-bottom">
     <div class="design-box">
       <img src="images/design-2.png" alt="">
-    </div>
-    <div class="container ">
-      <div class="">
-        <h2 class="">
-          Contact Us
-        </h2>
-      </div>
-
     </div>
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <form action="">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Jewellery Shop
+              </h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud
+            </p>
             <div>
-              <input type="text" placeholder="Name" />
+              <a href="">
+                Read More
+              </a>
             </div>
-            <div>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div>
-              <input type="text" placeholder="Phone" />
-            </div>
-            <div>
-              <input type="text" class="message-box" placeholder="Message" />
-            </div>
-            <div class="d-flex ">
-              <button>
-                SEND
-              </button>
-            </div>
-          </form>
+          </div>
         </div>
         <div class="col-md-6">
-          <div class="map_container">
-            <div class="map-responsive">
-              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
-            </div>
+          <div class="img-box">
+            <img src="images/about-img.png" alt="">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- end contact section -->
+  <!-- end about section -->
+
 
   <!-- info section -->
   <section class="info_section ">
@@ -237,6 +229,7 @@
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
+
 </body>
 
 </html>

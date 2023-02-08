@@ -28,13 +28,8 @@ create table Objet(
     id_proprietaire int,
     descri varchar(100),
     stat int,
-    foreign key(id_proprietaire) references Utilisateur(id_utilisateur)
-);
-
-create table Details(
-    id_objet int,
     img varchar(100),
-    foreign key(id_objet) references Objet(id_objet)
+    foreign key(id_proprietaire) references Utilisateur(id_utilisateur)
 );
 
 create table Proposition(
