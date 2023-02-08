@@ -18,16 +18,6 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function __construct()
-    {
-        parent::__construct();
-       
-        if(!$this->session->has_userdata('mail'))
-		{
-			redirect('welcome/index');  
-		}
-		$this->load->model('Model');
-    }
 	public function index()
 	{
 		$this->load->view('login');
@@ -78,6 +68,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->model('Model');
 		$data[] = array();
+		$data['content'] = 'perso';
 		$data['liste'] = $this->Model->perso($_SESSION['mail']);
 		$this->load->view('objet',$data);
 	}
@@ -86,6 +77,14 @@ class Welcome extends CI_Controller {
 		$this->load->model('Model');
 		$data[] = array();
 		$data['liste'] = $this->Model->details();
+		$this->load->view('objet',$data);
+	}
+	public function proposition()
+	{
+		$this->load->model('Model');
+		$data[] = array();
+		$data['content'] = 'proposition';
+		$data['liste'] = $this->Model->proposition($_SESSION['mail']);
 		$this->load->view('objet',$data);
 	}
 	public function deconnexion()

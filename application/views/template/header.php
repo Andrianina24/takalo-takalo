@@ -1,6 +1,4 @@
-<?php
-echo $_SESSION['mail'];
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -52,13 +50,13 @@ echo $_SESSION['mail'];
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="<?php echo base_url('welcome/index1') ?>">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="<?php echo base_url('welcome/objet_perso') ?>"> Me</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="jewellery.html">Jewellery </a>
+                  <a class="nav-link" href="<?php echo base_url('welcome/proposition') ?>">Proposition </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact us</a>

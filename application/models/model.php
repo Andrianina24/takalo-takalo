@@ -44,5 +44,16 @@ class Model extends CI_Model
         }
         return $data;
     }
+    public function proposition($mail)
+    {
+        $sql = "select Proposition.*,u.nom as client,o.nom_objet as objet1,o.prix as p1,o.descri as d1,o.img as img1,o2.nom_objet as objet2,o2.prix as p2,o2.descri as d2,o2.img as img2 from Proposition join Utilisateur u on Proposition.id_cible=u.id_utilisateur join Objet o on o.id_objet=Proposition.id_objet join Utilisateur u2 on Proposition.id_client=u2.id_utilisateur join Objet o2 on o2.id_objet=Proposition.id_objet_cible where u.email=%s";
+        $sql = sprintf($sql, $this->db->escape($mail));
+        $query = $this->db->query($sql);
+        $data[] = array();
+        foreach ($query->result_array() as $row) {
+            $data[] = $row;
+        }
+        return $data;
+    }
 }
 ?>

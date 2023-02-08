@@ -31,6 +31,7 @@ create table Proposition(
     id_client int,
     id_cible int,
     id_objet int,
+    id_objet_cible int,
     stat int,
     foreign key(id_client) references Utilisateur(id_utilisateur),
     foreign key(id_cible) references Utilisateur(id_utilisateur),
@@ -58,3 +59,5 @@ insert into Categorie values(null,'Bas');
 insert into Categorie values(null,'Accessoires');
 insert into Categorie values(null,'Chaussures');
 insert into Categorie values(null,'Autres');
+
+insert into Proposition values(1,4,1,3,0);
